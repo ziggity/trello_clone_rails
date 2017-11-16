@@ -1,1 +1,5 @@
 <p><%= task.content %> </p>
+<%= link_to "delete", project_task_path(@project, task.id), method: :delete, data: { confirm: " are you sure?" } %>
+
+<%= link_to "mark as complete", complete_project_task_path(@project, task.id), method: :patch %>
+
